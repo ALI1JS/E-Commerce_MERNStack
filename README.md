@@ -1,5 +1,6 @@
 
 E-Commerce_mernstack
+
    This app used to buy foods and provides some features that
      help the client to do that
 
@@ -13,6 +14,7 @@ Installation
 
 
 Usage
+
   to use this app you must do this steps
   1- execute this command  npm install (to install all the depenceses node_modules)
   2- execute this command cd client then  npm start 
