@@ -5,6 +5,7 @@ const connection = require('./config/dbconnction');
 const authRouter = require('./routers/authrouter');
 const detailsRouter = require('./routers/detailsrouter');
 const newproductRouter = require("./routers/newproduct");
+const paymentRouter = require("./routers/paymentrouter");
 const app = express();
 
 
@@ -42,6 +43,7 @@ app.use(cors({
 app.use('/api',authRouter);
 app.use('/api',detailsRouter);
 app.use('/api',newproductRouter);
+app.use('/api',paymentRouter)
 
 
 /**

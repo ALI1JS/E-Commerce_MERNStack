@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { removeProduct } from "../../statemangment/reducers/cartstate";
 import { AiOutlinePlus } from "react-icons/ai";
 import {toast} from "react-hot-toast"
+import axios from "axios";
 
 const Cart = () => {
   const products = useSelector((state) => state.productState.products);
@@ -36,6 +37,10 @@ const Cart = () => {
        return (total);
     }
     
+    const checkout = ()=>
+    {
+      axios.post("api/payment")
+    }
 
     const Remove = (id)=>
     {
@@ -228,9 +233,12 @@ const Cart = () => {
             <span>Total cost</span>
             <span>{total === 0 ? Total()+10: total + 10} $</span>
           </div>
-          <button onClick={Checkout} class = "bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
+          
+          <form action="http://localhost:5000/api/payment" method="POST">
+          <button class = "bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
             Checkout
           </button>
+           </form>
         </div>
       </div>
 

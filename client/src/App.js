@@ -11,6 +11,8 @@ import Acount from "./components/userDashboard/acountcomp";
 import { Children } from "react";
 import NewProductP from "./pages/addproductP.js";
 import CartP from "./pages/cartpage";
+import PaymentPage from "./pages/paymentpage";
+import AboutPage from "./pages/aboutpage";
 
 
 const routers = createBrowserRouter([
@@ -20,7 +22,7 @@ const routers = createBrowserRouter([
   },
   {
     path:"/about",
-    element:<h2>Details page</h2>
+    element:<AboutPage/>
   },
   {
     path:"/contact",
@@ -53,6 +55,10 @@ const routers = createBrowserRouter([
   {
     path:"/user/newProduct",
     element:<NewProductP/>
+  },
+  {
+    path:"payment",
+    element:<PaymentPage/>
   }
 ]);
 
